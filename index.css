@@ -1,0 +1,43 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+#bird{
+    position:absolute;
+    background-image: url('flappy-bird.png');
+    width:60px;
+    height:45px;
+    top: 50%;
+    left: 45%;
+    z-index:1;
+}
+
+#background{
+    position:absolute;
+    background-image: url('station-background.png');
+    width:200%;
+    height:120%;
+    animation: slideright 50s infinite linear;
+    z-index: -1;
+}
+
+#scroller{
+    position:absolute;
+    bottom: -30%;
+    width:200%;
+    height:45%;
+    background-image: url('bottom-background.png');
+    background-repeat: repeat-x;
+    animation: slideright 5s infinite linear;
+    z-index:0;
+}
+@keyframes slideright {
+  from {
+      left: 0%;
+  }
+  to {
+      left: -50%;
+  }
+}
